@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-surface: #0b1326;
+  --color-surface-dim: #0b1326;
+  --color-surface-bright: #31394d;
+  --color-surface-container-lowest: #060e20;
+  --color-surface-container-low: #131b2e;
+  --color-surface-container: #171f33;
+  --color-surface-container-high: #222a3d;
+  --color-surface-container-highest: #2d3449;
+  --color-on-surface: #dae2fd;
+  --color-on-surface-variant: #bbc9cd;
+  --color-inverse-surface: #dae2fd;
+  --color-inverse-on-surface: #283044;
+  --color-outline: #859397;
+  --color-outline-variant: #3c494c;
+  --color-surface-tint: #2fd9f4;
+  --color-primary: #8aebff;
+  --color-on-primary: #00363e;
+  --color-primary-container: #22d3ee;
+  --color-on-primary-container: #005763;
+  --color-inverse-primary: #006877;
+  --color-secondary: #89ceff;
+  --color-on-secondary: #00344d;
+  --color-secondary-container: #00a2e6;
+  --color-on-secondary-container: #00344e;
+  --color-tertiary: #dbdddf;
+  --color-on-tertiary: #2d3133;
+  --color-tertiary-container: #bfc1c3;
+  --color-on-tertiary-container: #4c4f51;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  
+  --font-geist: var(--font-geist-sans);
+  
+  --spacing-gutter: 24px;
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 16px;
+  --spacing-base: 4px;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-geist), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Highlight Button Styles */
+.highlight-button {
+  position: relative;
+  background: linear-gradient(0deg, var(--color-primary-container), var(--color-primary));
+  color: var(--color-on-primary);
+  isolation: isolate;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight-button::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: inherit;
+  filter: blur(10px);
+  z-index: -1;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.highlight-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(34, 211, 238, 0.5);
+}
+
+.highlight-button:hover::before {
+  opacity: 0.8;
+}
+
+.highlight-button:active {
+  transform: translateY(0);
+}
+
+/* Weighted Vertical Roll */
+@keyframes weighted-roll {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-3deg); }
+}
+.animate-weighted-roll {
+  animation: weighted-roll 6s ease-in-out infinite;
+}
+
+/* Scroll Reveal Animation */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glowing UI Elements */
+.glow-hover {
+  transition: all 0.3s ease;
+}
+.glow-hover:hover {
+  border-color: rgba(34, 211, 238, 0.8);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.15), inset 0 0 10px rgba(34, 211, 238, 0.05);
+  transform: translateY(-4px);
+}
+
+/* Smart SVG Animations */
+.group:hover .smart-gauge-needle {
+  transform: rotate(45deg);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.smart-gauge-needle {
+  transform: rotate(-45deg);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center bottom;
+}
+
+.group:hover .smart-waveform {
+  animation: waveform-slide 2s linear infinite;
+}
+@keyframes waveform-slide {
+  to { stroke-dashoffset: -40; }
+}
+
+.smart-waveform {
+  stroke-dasharray: 10 10;
+}
+
+.is-visible .auto-play-waveform {
+  animation: waveform-slide 2s linear infinite;
+}
+.is-visible .auto-play-gauge {
+  animation: pulse-gauge-smart 3s ease-in-out infinite;
+}
+
+@keyframes pulse-gauge-smart {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(20deg); }
+}
+.auto-play-gauge {
+  transform-origin: center bottom;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
