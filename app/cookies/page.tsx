@@ -1,8 +1,7 @@
-import React from "react";
 
 export const metadata = {
-  title: "Cookie Policy | Erez Tire & Auto",
-  description: "Cookie Policy for Erez Tire & Auto in Arvada, CO.",
+  title: "Cookie Policy | Ares Tire & Auto",
+  description: "Cookie Policy for Ares Tire & Auto in Arvada, CO.",
 };
 
 export default function CookiesPage() {
@@ -11,12 +10,12 @@ export default function CookiesPage() {
       <h1 className="text-4xl md:text-5xl font-bold text-[#dae2fd] mb-8">Cookie Policy</h1>
       <div className="space-y-6 text-lg font-light">
         <p>Last Updated: October 2024</p>
-        
+
         <h2 className="text-2xl font-bold text-[#dae2fd] mt-8">1. What Are Cookies</h2>
         <p>Cookies are small text files that are stored on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and provide information to the owners of the site.</p>
-        
+
         <h2 className="text-2xl font-bold text-[#dae2fd] mt-8">2. How We Use Cookies</h2>
-        <p>Erez Tire & Auto uses cookies to:</p>
+        <p>Ares Tire & Auto uses cookies to:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>Understand and save your preferences for future visits.</li>
           <li>Compile aggregate data about site traffic and site interactions to offer better site experiences and tools in the future.</li>

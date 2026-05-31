@@ -1,8 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import { Cpu, Menu, Search, ShieldAlert, Wrench, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Search, Wrench, ShieldAlert, Cpu } from "lucide-react";
+import { useState } from "react";
 import { DropdownNavigation, NavItem } from "./ui/dropdown-navigation";
 
 const NAV_ITEMS: NavItem[] = [
@@ -13,7 +13,7 @@ const NAV_ITEMS: NavItem[] = [
       {
         title: "Tire Shop",
         items: [
-          { label: "New Tires", description: "Premium rubber for all weather", icon: Cpu },
+          { label: "Used & New Tires", description: "Quality used and brand new tires", icon: Cpu },
           { label: "Tire Repair", description: "Puncture and leak fixes", icon: Wrench },
           { label: "Balancing & Alignment", description: "Precision handling", icon: ShieldAlert },
         ],
@@ -21,9 +21,9 @@ const NAV_ITEMS: NavItem[] = [
       {
         title: "Auto Repair",
         items: [
-          { label: "Engine Diagnostics", description: "Advanced code reading", icon: Cpu },
-          { label: "Brake Service", description: "Pads, rotors, and fluid", icon: ShieldAlert },
-          { label: "General Maintenance", description: "Oil changes and tune-ups", icon: Wrench },
+          { label: "Light Duty Brakes", description: "Pads, rotors, and fluid", icon: ShieldAlert },
+          { label: "Shocks & Rims", description: "Ride comfort and wheels", icon: Wrench },
+          { label: "Tires", description: "Mounting and installation", icon: Cpu },
         ],
       },
     ],
@@ -41,8 +41,8 @@ export function Header() {
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2 z-50">
           <Image
-            src="/logo.png"
-            alt="Erez Tire and Auto Logo"
+            src="/logo.jpeg"
+            alt="Ares Tire and Auto Logo"
             width={160}
             height={40}
             className="h-10 w-auto object-contain"

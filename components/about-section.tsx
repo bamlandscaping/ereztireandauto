@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
-import Image from "next/image";
 import { Award, Clock, ShieldCheck, Users } from "lucide-react";
+import Image from "next/image";
 import { ScrollReveal } from "./ui/scroll-reveal";
 
 export function AboutSection() {
@@ -17,7 +16,7 @@ export function AboutSection() {
                   Engineered for Performance. Driven by Trust.
                 </h2>
                 <p className="text-lg text-[#bbc9cd] font-light leading-relaxed">
-                  Since our founding, Erez Tire & Auto has been Arvada&apos;s premier destination for uncompromising automotive care. We believe that every vehicle deserves precision engineering and transparent service. Our team of ASE-certified technicians brings decades of combined experience to every diagnostic scan, brake job, and tire installation.
+                  Since our founding, Ares Tire & Auto has been Arvada&apos;s trusted destination for used and new tires plus light duty brakes, shocks, rims, and tires. We believe every vehicle deserves honest service and fair pricing. Our experienced technicians bring years of combined experience to every brake job, shock install, and tire installation.
                 </p>
               </div>
 

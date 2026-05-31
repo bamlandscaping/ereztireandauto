@@ -1,9 +1,9 @@
+import { CallButton } from "@/components/call-button";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import { CallButton } from "@/components/call-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,32 +17,38 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ereztireandauto.com"),
-  title: "Erez Tire and Auto | #1 Tire Shop & Auto Repair in Arvada, CO",
-  description: "Arvada's most trusted tire shop & auto repair. New tires, brakes, oil changes, engine diagnostics. Call (720) 435-8409. 5250 W 53rd Pl, Arvada CO.",
-  keywords: "tire shop arvada co, auto repair arvada, brake repair arvada, oil change arvada co, mechanic arvada colorado, tire installation near me",
+  title: "Ares Tire and Auto | Used & New Tires + Auto Repair in Arvada, CO",
+  description: "Arvada's trusted tire shop & auto repair. Used and new tires, light duty brakes, shocks, rims, and tires. Call (720) 435-8409. 5250 W 53rd Pl, Arvada CO.",
+  keywords: "used tires arvada co, new tires arvada, tire shop arvada co, light duty brakes arvada, shocks arvada, rims arvada, auto repair arvada colorado, tire installation near me",
   openGraph: {
-    title: "Erez Tire and Auto | Premium Auto Care",
-    description: "Expert diagnostics, meticulous repairs, and top-tier tire solutions in Arvada, CO.",
+    title: "Ares Tire and Auto | Used & New Tires + Auto Repair",
+    description: "Used and new tires plus light duty brakes, shocks, rims, and tires in Arvada, CO.",
     url: "https://ereztireandauto.com",
-    siteName: "Erez Tire and Auto",
+    siteName: "Ares Tire and Auto",
     images: [
       {
-        url: "/icon.png",
-        width: 1200,
-        height: 630,
-        alt: "Erez Tire and Auto",
+        url: "/og-image.jpeg",
+        width: 1024,
+        height: 576,
+        alt: "Ares Tire and Auto",
       },
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ares Tire and Auto | Used & New Tires + Auto Repair",
+    description: "Used and new tires plus light duty brakes, shocks, rims, and tires in Arvada, CO.",
+    images: ["/og-image.jpeg"],
   },
 };
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "AutoRepair", "TireShop"],
-  "name": "Erez Tire and Auto",
-  "image": "https://ereztireandauto.com/logo.png",
+  "name": "Ares Tire and Auto",
+  "image": "https://ereztireandauto.com/og-image.jpeg",
   "@id": "https://ereztireandauto.com",
   "url": "https://ereztireandauto.com",
   "telephone": "+17204358409",
@@ -94,7 +100,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <Header />
-        <main className="flex-grow">
+        <main className="grow">
           {children}
         </main>
         <Footer />

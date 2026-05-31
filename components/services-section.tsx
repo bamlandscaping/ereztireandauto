@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { AnimatedGauge } from "./svgs/animated-gauge";
-import { AnimatedEngine } from "./svgs/animated-engine";
-import { ScrollReveal } from "./ui/scroll-reveal";
 import Image from "next/image";
+import React from "react";
+import { AnimatedEngine } from "./svgs/animated-engine";
+import { AnimatedGauge } from "./svgs/animated-gauge";
+import { ScrollReveal } from "./ui/scroll-reveal";
 
 interface ServiceCardProps {
   id: string;
@@ -52,19 +52,19 @@ export function ServicesSection() {
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ServiceCard 
+            <ServiceCard
               id="tires"
-              title="Tire Shop"
-              subtitle="Premium Rubber"
-              description="Focusing on premium tire sales, installation, balancing, and performance solutions for all weather conditions."
+              title="Used & New Tires"
+              subtitle="Tire Shop"
+              description="Quality used and brand new tires for every budget, plus expert mounting, balancing, and installation for all weather conditions."
               linkText="Explore Tires"
               animation={<AnimatedGauge className="w-full h-full" />}
             />
-            <ServiceCard 
+            <ServiceCard
               id="repair"
-              title="Car Repair"
-              subtitle="Expert Diagnostics"
-              description="Focusing on expert mechanical service, engine diagnostics, brake repair, and comprehensive maintenance."
+              title="Auto Repair"
+              subtitle="Light Duty Service"
+              description="Light duty brakes, shocks, rims, and tires. Honest, reliable service to keep your vehicle safe and riding smooth."
               linkText="Explore Repair"
               animation={<AnimatedEngine className="w-full h-full" />}
               delay={0.1}
@@ -82,13 +82,13 @@ export function ServicesSection() {
                 <Image src="/winter-tires.webp" alt="Winter Tires" fill className="object-cover" />
               </div>
               <div className="order-1 md:order-2 space-y-6">
-                <h3 className="text-3xl md:text-4xl font-bold text-[#dae2fd] tracking-tight">Tire Experts</h3>
-                <p className="text-lg text-[#bbc9cd] font-light">We stock and install industry-leading rubber compounds designed for exact grip, wear, and performance metrics. Featuring certified installations for major brands.</p>
+                <h3 className="text-3xl md:text-4xl font-bold text-[#dae2fd] tracking-tight">Used & New Tires</h3>
+                <p className="text-lg text-[#bbc9cd] font-light">We sell and install both quality used tires and brand new tires for every budget. Expert mounting and balancing for major brands.</p>
                 <ul className="space-y-4 pt-4">
                   {[
-                    "Touchless mounting systems to protect custom rims.",
-                    "Road force balancing for the smoothest possible ride.",
-                    "Precision digital alignment services."
+                    "Affordable used tires and brand new tires in stock.",
+                    "Touchless mounting to protect your rims.",
+                    "Road force balancing for the smoothest possible ride."
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="text-[#8aebff] w-5 h-5 shrink-0 mt-0.5" />
@@ -108,13 +108,13 @@ export function ServicesSection() {
           <ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
-                <h3 className="text-3xl md:text-4xl font-bold text-[#dae2fd] tracking-tight">Mechanical Masters</h3>
-                <p className="text-lg text-[#bbc9cd] font-light">Our ASE-certified technicians employ state-of-the-art diagnostic equipment to accurately identify and resolve complex mechanical and electrical issues.</p>
+                <h3 className="text-3xl md:text-4xl font-bold text-[#dae2fd] tracking-tight">Light Duty Auto Repair</h3>
+                <p className="text-lg text-[#bbc9cd] font-light">From brakes to shocks, rims, and tires, our experienced technicians keep your vehicle safe, smooth, and road-ready.</p>
                 <ul className="space-y-4 pt-4">
                   {[
-                    "Comprehensive engine diagnostics and repair.",
-                    "Brake system overhaul and fluid services.",
-                    "Scheduled factory maintenance protocols."
+                    "Light duty brake service: pads, rotors, and fluid.",
+                    "Shock replacement for a smoother, controlled ride.",
+                    "Rims and tires: mounting, balancing, and installation."
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="text-[#8aebff] w-5 h-5 shrink-0 mt-0.5" />

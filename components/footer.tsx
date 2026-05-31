@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -9,8 +8,8 @@ export function Footer() {
       <div className="flex flex-col items-center justify-center gap-8 px-4 md:px-16 text-center max-w-screen-2xl mx-auto">
         <Link href="/" className="flex items-center gap-2 mb-4">
           <Image
-          src="/logo.png"
-          alt="Erez Tire and Auto Logo"
+          src="/logo.jpeg"
+          alt="Ares Tire and Auto Logo"
           width={160}
           height={40}
           className="h-10 w-auto object-contain"
@@ -23,7 +22,7 @@ export function Footer() {
         <a href="#contact" className="text-[#bbc9cd] hover:text-[#8aebff] transition-colors opacity-80 hover:opacity-100">Contact</a>
       </div>
       <p className="font-mono text-sm text-[#bbc9cd]/50">
-        &copy; 2024 Erez Tire and Auto - Arvada, CO. All Rights Reserved.
+        &copy; 2026 Ares Tire and Auto - Arvada, CO. All Rights Reserved.
       </p>
       </div>
     </footer>
